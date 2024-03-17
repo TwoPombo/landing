@@ -1,0 +1,72 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ServiceCard from "../components/ServiceCard.astro";
+---
+
+<Layout title="Welcome to TwoPombo">
+    <main>
+        <div class="bg-neutral-50 py-32">
+            <div class="container">
+                <div class="grid grid-cols-1 md:grid-cols-2">
+                    <div>
+                        <h1 class="text-5xl font-bold text-neutral-800 mb-5">
+                            Welcome to <span class="font-gradient">TwoPombo</span>
+                        </h1>
+                        <p class="text-neutral-700">
+                            We are a small team of developers and designers who love to create beautiful and functional
+                            websites and applications.
+                        </p>
+                    </div>
+                    <div>
+                        <img class="object-cover w-full h-96 rounded-xl"
+                             src="https://static.remove.bg/sample-gallery/graphics/bird-thumbnail.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="py-32">
+            <div class="container" id="services">
+                <h2 class="text-5xl">Servicios</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 mt-20 gap-10">
+                    <ServiceCard
+                            image="https://www.shutterstock.com/image-photo/team-consulting-auditors-auditing-financial-600nw-705804559.jpg"
+                            title="Desarrollo Web"
+                            description="Desarrollamos sitios web a medida, con las últimas tecnologías y con un diseño único y atractivo."
+                    />
+                    <ServiceCard
+                            image="https://www.shutterstock.com/image-photo/team-consulting-auditors-auditing-financial-600nw-705804559.jpg"
+                            title="Consultoría"
+                            description="Brindamos asesoramiento en tecnologías de la información y comunicación, para que puedas tomar las mejores decisiones."
+                    />
+                    <ServiceCard
+                            image="https://www.shutterstock.com/image-photo/team-consulting-auditors-auditing-financial-600nw-705804559.jpg"
+                            title="Odoo"
+                            description="Implementamos y personalizamos Odoo, el sistema de gestión empresarial más completo y flexible del mercado"
+                    />
+                </div>
+            </div>
+        </div>
+        <div class="bg-neutral-50 py-32">
+            <div class="container" id="contact">
+                <h2 class="text-5xl">Contáctanos</h2>
+                <form method="post">
+                    <div class="grid grid-cols-2 gap-10 mt-20">
+                        <div>
+                            <label for="name" class="block text-neutral-800">Nombre</label>
+                            <input type="text" id="name" name="name" class="w-full rounded-lg border border-neutral-300 p-4">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-neutral-800">Email</label>
+                            <input type="email" id="email" name="email" class="w-full rounded-lg border border-neutral-300 p-4">
+                        </div>
+                    </div>
+                    <div class="mt-10">
+                        <label for="message" class="block text-neutral-800">Mensaje</label>
+                        <textarea id="message" name="message" class="w-full rounded-lg border border-neutral-300 p-4"></textarea>
+                    </div>
+                    <button type="submit" class="mt-10 bg-blue-600 text-white font-bold py-4 px-8 rounded-lg">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </main>
+</Layout>
